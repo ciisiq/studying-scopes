@@ -41,3 +41,33 @@ function calcAge(birthYear) {
 //Global Variable
 const firstName = 'Cintia';
 calcAge(1991);
+
+//95 Hoisting and TDZ in practice
+// console.log(me);
+// Underfined
+// console.log(job);
+// Cannot acces "job" before initialization
+// console.log(year);
+// Cannot acces "job" before initialization
+
+var me = 'Jonas';
+let job = 'teacher';
+const year = 1991;
+
+console.log(addDecl(2, 1));
+//Will be able to acess
+// console.log(addExpr(2, 1));
+//Will not be able before initilization
+// console.log(addArrow(2, 1));
+//Will not be able before initilization
+
+//function declaration
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
